@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url('https://source.unsplash.com/1600x900/?landscape');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #000000;
+    height: 38%;
+    width: 40%;
+    opacity: 0.85;
+    color: white;
+    border-radius: 30px;
+}
+
+.search {
+    font-size: 30px;
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar {
+    width: 400px;
+    height: 50px;
+    border: 3px solid rgba(255, 251, 251, 0.541);
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    background-color: black;
+    border: 3px solid rgb(0, 0, 0);
+    color: honeydew;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    color: rgb(14, 15, 14);
+    background: #e6e4e45d;
+}
+
+#icon {
+    font-size: 20px;
+}
+
+.weather {
+    margin-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+}
+
+.temp {
+    margin-top: -20px;
+    margin-bottom: 0.4em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weather.loading {
+    visibility: hidden;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+@media only screen and (max-width: 1353px) {
+    .container {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1155px) {
+    .container {
+        width: 65%;
+        height: 35%;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+    .container {
+        width: 85%;
+        height: 44%;
+    }
+    .searchBar {
+        width: 300px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        width: 95%;
+    }
+    .searchBar {
+        width: 250px;
+        height: 50px;
+    }
+}
