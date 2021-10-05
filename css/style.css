@@ -7,7 +7,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background: url('https://source.unsplash.com/1600x900/?landscape');
+    background: url('https://source.unsplash.com/1600x900/?nature,landscape');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,13 +16,16 @@ body {
 
 .container {
     background-color: #000000;
-    height: 38%;
-    width: 40%;
+    height: 15%;
+    width: 35%;
     opacity: 0.85;
     color: white;
     border-radius: 30px;
 }
-
+.container.length{
+    height: 45%;
+    width: 35%;
+}
 .search {
     font-size: 30px;
     position: relative;
@@ -61,7 +64,7 @@ body {
 }
 
 .weather {
-    margin-top: 20px;
+    margin-top: 10px;
     padding-left: 20px;
     display: flex;
     align-items: left;
@@ -91,30 +94,43 @@ body {
 
 .weather.loading:after {
     visibility: visible;
-    content: "Loading...";
     color: rgb(255, 255, 255);
     position: absolute;
-    top: 0;
-    left: 20px;
+    margin-top: 40px;
+    left: 40%;
 }
 
 @media only screen and (max-width: 1353px) {
     .container {
         width: 45%;
+        height: 15%;
+    }
+    .container.length{
+        width: 95%;
     }
 }
 
 @media only screen and (max-width: 1155px) {
     .container {
         width: 65%;
-        height: 35%;
+        height: 15%;
+    }
+    .container.length{
+        width: 95%;
+    }
+    .searchBar {
+        width: 300px;
+        height: 60px;
     }
 }
 
 @media only screen and (max-width: 786px) {
     .container {
         width: 85%;
-        height: 44%;
+        height: 15%;
+    }
+    .container.length{
+        width: 95%;
     }
     .searchBar {
         width: 300px;
@@ -125,9 +141,15 @@ body {
 @media only screen and (max-width: 450px) {
     .container {
         width: 95%;
+        height: 15%;
     }
     .searchBar {
-        width: 250px;
+        margin-left: 10px;
+        width: 200px;
         height: 50px;
+    }
+    .container.length{
+        width: 95%;
+        height: 50%;
     }
 }
