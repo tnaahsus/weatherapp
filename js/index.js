@@ -1,6 +1,6 @@
 
 let weather = {
-    "apikey": ""
+    "apikey": "27988cfcad0f8d9a54de027695c50edd"
 }
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 const search = document.getElementById('search')
